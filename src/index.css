@@ -1,0 +1,15 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  color: #000;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(233, 223, 255);
+}
