@@ -65,14 +65,30 @@
 @media (max-width: 40em) {
   .select-input {
     padding: 0.6rem 2.2rem 0.6rem 0.6rem;
-    color: #9883c4;
+
     font-size: 1.4rem;
   }
 }
 @media (max-width: 28em) {
   .select-input {
     padding: 0.4rem 2rem 0.4rem 0.4rem;
-    color: #9883c4;
+
     font-size: 1.2rem;
+  }
+}
+@media (max-width: 20.6em) {
+  .select-input {
+    padding: 0.2rem 1.4rem 0.2rem 0.2rem;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 19.6em) {
+  .select-container {
+    text-align: left;
+  }
+
+  .select-input {
+    padding: 0.2rem 1.4rem 0.2rem 0.2rem;
+    font-size: 1rem;
   }
 }

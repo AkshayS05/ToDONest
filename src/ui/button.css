@@ -63,7 +63,8 @@ button[disabled] {
   }
   .primary,
   .secondary,
-  .delete {
+  .delete,
+  .edit {
     padding: 1.2rem 1.6rem;
   }
 }
@@ -76,7 +77,8 @@ button[disabled] {
   }
   .primary,
   .secondary,
-  .delete {
+  .delete,
+  .edit {
     padding: 1rem 1.4rem;
   }
 }
@@ -84,7 +86,8 @@ button[disabled] {
 @media (max-width: 36em) {
   .primary,
   .secondary,
-  .delete {
+  .delete,
+  .edit {
     padding: 0.8rem 1rem;
   }
 }
@@ -92,7 +95,18 @@ button[disabled] {
 @media (max-width: 28em) {
   .primary,
   .secondary,
-  .delete {
+  .delete,
+  .edit .add_task_btn {
+    font-size: 1.2rem;
+  }
+  .add_task_btn {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 27em) {
+  .add_task_btn {
+    padding: 1rem;
     font-size: 1.2rem;
   }
 }
@@ -100,18 +114,33 @@ button[disabled] {
 @media (max-width: 24em) {
   .primary,
   .secondary,
-  .delete {
+  .delete,
+  .edit {
     font-size: 1rem;
-  }
-  .add_task_btn {
-    padding: 1rem;
   }
 }
 
-@media (max-width: 21.5em) {
+@media (max-width: 21.9em) {
   .primary,
   .secondary,
-  .delete {
+  .delete,
+  .edit {
     font-size: 0.9rem;
+  }
+}
+@media (max-width: 20.6em) {
+  .primary,
+  .secondary {
+    font-size: 0.9rem;
+    max-width: 80%;
+    padding: 1rem;
+  }
+}
+@media (max-width: 19.6em) {
+  .primary,
+  .secondary {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+    max-width: 70%;
   }
 }

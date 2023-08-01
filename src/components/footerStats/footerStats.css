@@ -83,3 +83,8 @@ p.progressMessage {
     font-size: 1.2rem;
   }
 }
+@media (max-width: 19.6em) {
+  .footer_items {
+    padding: 0 1rem;
+  }
+}

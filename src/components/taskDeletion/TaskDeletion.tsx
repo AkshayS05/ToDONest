@@ -19,11 +19,11 @@ const TaskDeletion = () => {
         <div className="footer_buttons">
           {/* button to delete completed tasks */}
           <Button type="primary" onClick={() => onCompletedTasksDeletion()}>
-            Clear Completed Tasks
+            Clear Completed
           </Button>
           {/* button to delete all the tasks */}
           <Button type="primary" onClick={() => onDeleteAll()}>
-            Clear List
+            Clear All
           </Button>
         </div>
       </div>

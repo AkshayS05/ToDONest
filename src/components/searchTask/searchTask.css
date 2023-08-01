@@ -29,6 +29,10 @@ input[type="search"] {
   font-size: 1.6rem;
   width: 100%;
   box-sizing: border-box;
+  padding: 1rem;
+}
+input.searchBar[disabled] {
+  cursor: not-allowed;
 }
 /* media queries */
 @media (max-width: 50em) {

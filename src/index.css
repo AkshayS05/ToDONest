@@ -35,9 +35,21 @@ body {
     font-size: 1.8rem;
   }
 }
+@media (max-width: 27em) {
+  .weekday {
+    font-size: 1.4rem;
+  }
+}
 
 @media (max-width: 23em) {
   h1 {
     font-size: 2rem;
+  }
+}
+@media (max-width: 23em) {
+  .weekday {
+    font-size: 1.4rem;
+    max-width: 50%;
+    text-align: left;
   }
 }

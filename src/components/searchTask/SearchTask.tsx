@@ -3,7 +3,7 @@ import { useTasks } from "../../context/TaskContext";
 
 const SearchTask = () => {
   //get tasks list, searchquery state, setQuery and addTask from TaskContext
-  const { searchQuery, setSearchQuery, addTask } = useTasks();
+  const { tasks, searchQuery, setSearchQuery, addTask } = useTasks();
 
   const handleQuery = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value);
@@ -19,7 +19,12 @@ const SearchTask = () => {
         value={searchQuery}
         // on change of the input, if user types set the query to that value
         onChange={(e) => handleQuery(e)}
-        placeholder="Search tasks..."
+        placeholder={
+          tasks.length > 0
+            ? "Search tasks..."
+            : "Add Task to start searching..."
+        }
+        disabled={tasks.length === 0}
       />
     </div>
   );
