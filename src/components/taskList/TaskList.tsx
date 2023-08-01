@@ -11,7 +11,7 @@ const TaskList = () => {
       <ul className="taskList">
         {/* iterate over the tasks and create a list */}
         {tasks?.map((task) => (
-          <Task key={task.id} />
+          <Task key={task.id} task={task} />
         ))}
       </ul>
     </div>

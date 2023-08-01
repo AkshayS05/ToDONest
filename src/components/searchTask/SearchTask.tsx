@@ -15,6 +15,9 @@ const SearchTask = () => {
     setVisible(tasks.length > 0);
   }, [tasks]);
 
+  const handleQuery = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(e.target.value);
+  };
   //if form is open, don't do anything.
   if (addTask) {
     return null;
@@ -26,7 +29,7 @@ const SearchTask = () => {
         type="search"
         value={searchQuery}
         // on change of the input, if user types set the query to that value
-        onChange={(e) => setSearchQuery(e.target.value)}
+        onChange={(e) => handleQuery(e)}
         placeholder="Search tasks..."
       />
     </div>

@@ -7,6 +7,7 @@ import Button from "./ui/Button";
 
 // styles
 import "./App.css";
+import TaskList from "./components/taskList/TaskList";
 
 function App() {
   const { onNewTask } = useTasks();
@@ -24,6 +25,7 @@ function App() {
         </span>
       </div>
       <AddTaskHelper />
+      <TaskList />
     </div>
   );
 }

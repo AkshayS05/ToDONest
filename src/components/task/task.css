@@ -1,0 +1,113 @@
+/* regular tasks */
+li.task,
+li.priority {
+  background-color: #cbc1e1;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2rem;
+  z-index: 1;
+  padding-left: 8rem;
+  font-size: 1.8rem;
+}
+
+/* task name and checkbox container */
+li .task_name {
+  display: flex;
+  align-items: center;
+}
+
+/* task name */
+li .task_name span {
+  margin-right: 10px;
+}
+
+/* checkbox */
+li .task_name input[type="checkbox"] {
+  /* Match the checkbox with your app's theme */
+  /* For example, you can set the appearance and size of the checkbox */
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #5f9ea0; /* Border color for the checkbox */
+  border-radius: 4px;
+  margin-right: 10px; /* Add some spacing between the checkbox and name */
+}
+
+li .task_name input[type="checkbox"]:checked {
+  background-color: #5f9ea0; /* Background color when the checkbox is checked */
+}
+
+/* priority tasks */
+li.priority {
+  position: relative;
+  background-color: #876fba;
+  z-index: 1;
+}
+
+li.priority::before {
+  content: "";
+  font-weight: 900;
+  font-size: 3rem;
+  color: #fff;
+  position: absolute;
+  top: 5;
+  left: 0;
+  width: 0.8rem;
+  height: 50%;
+  background-color: #5f9ea0;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+/* list buttons container */
+li .list_buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* edit button */
+li .list_buttons button {
+  background-color: #5f9ea0;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* media queries */
+
+@media (max-width: 50em) {
+  li.task,
+  li.priority {
+    padding: 1rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 40em) {
+  li.task,
+  li.priority {
+    padding: 1rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 28em) {
+  li.task,
+  li.priority {
+    padding: 0.8rem;
+    margin-bottom: 0.6rem;
+    font-size: 1.4rem;
+  }
+  li .task_name input[type="checkbox"] {
+    width: 1.4rem;
+    height: 1.4rem;
+    border: 2px solid #5f9ea0;
+    border-radius: 4px;
+    margin-right: 1rem;
+  }
+}

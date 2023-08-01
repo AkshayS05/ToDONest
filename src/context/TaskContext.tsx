@@ -5,6 +5,7 @@ import {
   ReactNode,
   Dispatch,
   SetStateAction,
+  useMemo,
 } from "react";
 import { useLocalStorageState } from "../hooks/useLocalStorageState";
 import TaskItems from "../model/task";
@@ -68,13 +69,16 @@ function TaskProvider({ children }: TaskProviderProps) {
     key: "myTasks",
   });
   // search task
-  const searchedTasks =
-    // if there is any search in the input, we will try to find the task from the list, if there is no search query then the tasks will be shown as they are.
-    searchQuery.length > 0
+
+  // if there is any search in the input, we will try to find the task from the list, if there is no search query then the tasks will be shown as they are.
+
+  const searchedTasks = useMemo(() => {
+    return searchQuery.length > 0
       ? tasks.filter((task) =>
           task.task.toLowerCase().includes(searchQuery.toLowerCase())
         )
       : tasks;
+  }, [tasks, searchQuery]);
   // to get the sorted tasks if user has selected any sort type else the initial state of sort by "input" will be used.
   const { sortedTasks } = useSort({ searchedTasks, sortBy });
 
