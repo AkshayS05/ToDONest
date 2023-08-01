@@ -11,7 +11,7 @@ export function useLocalStorageState<T>({
   initialState,
   key,
 }: useLocalStorageProps<T>): [T, React.Dispatch<React.SetStateAction<T>>] {
-  //if we have a stored value it will be set to that else it will return the initial state which is [] in this case.
+  //if we have a stored tasks it will be set to that else it will return the initial state which is [] in this case.
   const [value, setValue] = useState<T>(() => {
     try {
       const storedValue = localStorage.getItem(key);
