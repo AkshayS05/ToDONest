@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-
+import "./appHeading.css";
 interface AppProps {
   children: ReactNode;
 }

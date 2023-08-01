@@ -13,3 +13,8 @@ body {
   align-items: center;
   background-color: rgb(233, 223, 255);
 }
+.weekday {
+  font-size: 3rem;
+  text-align: center;
+  color: #53319c;
+}

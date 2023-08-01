@@ -3,7 +3,7 @@ h1 {
   text-transform: uppercase;
   font-weight: 700;
   text-align: center;
-  background-color: var(--bg-light);
+  background-color: #f7f9fc;
   color: rgb(83, 49, 156);
 }
 @media (max-width: 50em) {

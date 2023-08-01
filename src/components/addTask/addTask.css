@@ -1,0 +1,136 @@
+/* addTask.css */
+
+/* Styles for the modal overlay */
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure the overlay appears above other elements */
+}
+
+/* Styles for the form inside the modal */
+.form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 30rem; /* Adjust the width as needed */
+  z-index: 1001;
+}
+
+/* Styles for the form columns */
+.form_column {
+  margin-bottom: 1rem;
+}
+
+/* Styles for the form labels */
+.form_column label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+/* Styles for the form inputs */
+.form_column input,
+.form_column select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Styles for the buttons */
+.form_button {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+/* Styles for the primary button */
+.form_button .primary {
+  margin-right: 1rem;
+}
+
+/* Styles for the secondary button */
+.form_button .secondary {
+  background-color: #ccc;
+  color: #fff;
+}
+/* modal.css */
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Modal Dialog */
+.modal {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 40rem;
+}
+
+/* Close button */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.form_column input[type="checkbox"] {
+  width: 20px; /* Adjust the width of the checkbox */
+  height: 20px; /* Adjust the height of the checkbox */
+  margin-right: 8px; /* Add some spacing between the checkbox and label */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  appearance: none; /* Hide the default checkbox appearance */
+  cursor: pointer;
+  outline: none;
+  position: relative;
+}
+
+/* Style the custom checkbox using pseudo-elements */
+.form_column input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px; /* Adjust the size of the custom checkbox */
+  height: 12px; /* Adjust the size of the custom checkbox */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+/* Style the custom checkbox when checked */
+.form_column input[type="checkbox"]:checked::before {
+  background-color: #5f9ea0; /* Green color for the custom checkbox when checked */
+}
+
+/* Hide the checkbox input but keep the custom styles */
+.form_column input[type="checkbox"]:focus {
+  outline: none;
+  border-color: #5f9ea0; /* Add a focus effect when the checkbox is focused */
+}
