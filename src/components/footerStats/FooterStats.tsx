@@ -1,4 +1,5 @@
 import { useTasks } from "../../context/TaskContext";
+import TaskDeletion from "../taskDeletion/TaskDeletion";
 
 import "./footerStats.css";
 
@@ -22,14 +23,15 @@ const FooterStats = () => {
   const percentage = Math.round((completedTasks / totalTasks) * 100);
   return (
     <>
+      <TaskDeletion />
       <em>
         {/* in case all the tasks are completed */}
         {percentage === 100
-          ? "You have completed all the tasks! Well done!"
+          ? "You have completed all the tasks! Well done! 💪"
           : // if some of the tasks are completed
             `You have ${totalTasks} tasks in your list and ${
               totalTasks > 0
-                ? `you have already completed ${completedTasks} tasks`
+                ? `you have already completed ${completedTasks} tasks ✌`
                 : ""
             } - ${percentage}%`}
       </em>

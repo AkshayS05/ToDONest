@@ -23,7 +23,7 @@ const UseWeekDayGreets = () => {
       "Whoop, it's time to celebrate!",
       "Happy moments ahead!",
       "Seems it's a joyful occasion!",
-      "Awesome, it's party time!",
+      "Wishing a wonderful day!",
       "Have a nice and relaxing day!",
       "Happy fabulous moments await!",
       "Enjoy your wonderful journey!",

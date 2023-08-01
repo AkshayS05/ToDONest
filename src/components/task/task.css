@@ -1,6 +1,7 @@
 /* regular tasks */
 li.task,
-li.priority {
+li.priority,
+li.completed {
   background-color: #cbc1e1;
   padding: 1rem;
   margin-bottom: 1rem;
@@ -11,8 +12,22 @@ li.priority {
   z-index: 1;
   padding-left: 8rem;
   font-size: 1.8rem;
+  transition: box-shadow 0.3s ease;
 }
-
+li.priority:hover::after {
+  content: "Priority";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #876fba;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.4rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+}
 /* task name and checkbox container */
 li .task_name {
   display: flex;
@@ -21,23 +36,21 @@ li .task_name {
 
 /* task name */
 li .task_name span {
-  margin-right: 10px;
+  margin-right: 10rem;
 }
 
 /* checkbox */
 li .task_name input[type="checkbox"] {
-  /* Match the checkbox with your app's theme */
-  /* For example, you can set the appearance and size of the checkbox */
   appearance: none;
-  width: 18px;
-  height: 18px;
-  border: 2px solid #5f9ea0; /* Border color for the checkbox */
-  border-radius: 4px;
-  margin-right: 10px; /* Add some spacing between the checkbox and name */
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 2px solid #baadd7;
+  border-radius: 0.4rem;
+  margin-right: 1rem;
 }
 
 li .task_name input[type="checkbox"]:checked {
-  background-color: #5f9ea0; /* Background color when the checkbox is checked */
+  background-color: #53319c;
 }
 
 /* priority tasks */
@@ -46,7 +59,21 @@ li.priority {
   background-color: #876fba;
   z-index: 1;
 }
-
+li.priority:hover::after {
+  content: "Priority";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #876fba;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+}
+.completed {
+  text-decoration: line-through;
+}
 li.priority::before {
   content: "";
   font-weight: 900;
@@ -57,7 +84,7 @@ li.priority::before {
   left: 0;
   width: 0.8rem;
   height: 50%;
-  background-color: #5f9ea0;
+  background-color: #53319c;
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
 }
@@ -66,14 +93,14 @@ li.priority::before {
 li .list_buttons {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 1rem;
 }
 
 /* edit button */
 li .list_buttons button {
-  background-color: #5f9ea0;
+  background-color: #53319c;
   color: #fff;
-  padding: 5px 10px;
+  padding: 0.5rem 1rem;
   border: none;
   cursor: pointer;
 }
@@ -106,7 +133,7 @@ li .list_buttons button {
   li .task_name input[type="checkbox"] {
     width: 1.4rem;
     height: 1.4rem;
-    border: 2px solid #5f9ea0;
+    border: 2px solid #53319c;
     border-radius: 4px;
     margin-right: 1rem;
   }

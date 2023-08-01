@@ -9,6 +9,7 @@ interface Task {
   //a single task will be of type TaskItem model
   task: TaskItems;
 }
+
 const Task = ({ task }: Task) => {
   const { onEdit, onDelete, onToggle } = useTasks();
   return (
@@ -22,9 +23,8 @@ const Task = ({ task }: Task) => {
           onChange={() => onToggle(task.id)}
         />
         {/* if the task is marked as completed, then it will geta  style of cut out using line-through */}
-        <span style={task.status ? { textDecoration: "line-through" } : {}}>
-          {task.task}
-        </span>
+
+        <span className={task.status ? "completed" : ""}>{task.task}</span>
       </div>
       <div className="list_buttons">
         {/* Button components with Edit and Delete Children */}

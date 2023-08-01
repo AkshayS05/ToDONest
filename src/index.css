@@ -18,3 +18,26 @@ body {
   text-align: center;
   color: #53319c;
 }
+@media (max-width: 50em) {
+  h1 {
+    font-size: 3rem;
+  }
+  .weekday {
+    font-size: 2rem;
+  }
+}
+/* styles */
+@media (max-width: 40em) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  .weekday {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 23em) {
+  h1 {
+    font-size: 2rem;
+  }
+}

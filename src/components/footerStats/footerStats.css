@@ -16,10 +16,7 @@
   justify-content: space-around;
   align-items: center;
 }
-/* buttons in footer */
-.footer_items Button {
-  margin-left: 1rem;
-}
+
 /* progress message */
 footer em,
 p.progressMessage {
