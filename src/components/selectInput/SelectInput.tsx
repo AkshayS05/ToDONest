@@ -1,5 +1,5 @@
-import { useTasks } from "../context/TaskContext";
-import { SortByOption } from "../hooks/useSort";
+import { useTasks } from "../../context/TaskContext";
+import { SortByOption } from "../../hooks/useSort";
 import "./selectInput.css";
 
 const SelectInput = () => {

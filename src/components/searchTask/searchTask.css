@@ -1,0 +1,57 @@
+/* searchTask.css --div */
+.searchBarContainer {
+  position: relative;
+}
+/* --input  */
+.searchBar {
+  width: 0;
+  border-bottom: none; /* Initially, hide the border */
+  opacity: 0;
+  transition: width 0.3s ease-in-out, border-bottom 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+  position: absolute;
+  top: -18px;
+  left: 0;
+  z-index: 2;
+}
+/* when search bar is visible */
+.showSearchBar {
+  width: 16rem;
+  border-bottom: 1px solid #000; /* Show the border on the search bar */
+  opacity: 1;
+}
+/* inner portion of the search bar */
+input[type="search"] {
+  border: none;
+  border-radius: 10rem;
+  outline: none;
+  padding: 4px 8px;
+  font-size: 1.6rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+/* media queries */
+@media (max-width: 50em) {
+  .searchBar {
+    top: -1.2rem;
+    width: 80%;
+  }
+}
+@media (max-width: 40em) {
+  .searchBar {
+    width: 50%;
+  }
+}
+@media (max-width: 28em) {
+  .searchBar {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  input[type="search"] {
+    padding: 0.2rem 0.6rem;
+    font-size: 1.4rem;
+    width: 100%;
+  }
+}
