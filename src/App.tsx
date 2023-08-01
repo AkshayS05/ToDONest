@@ -8,6 +8,7 @@ import Button from "./ui/Button";
 // styles
 import "./App.css";
 import TaskList from "./components/taskList/TaskList";
+import FooterStats from "./components/footerStats/FooterStats";
 
 function App() {
   const { onNewTask } = useTasks();
@@ -26,6 +27,9 @@ function App() {
       </div>
       <AddTaskHelper />
       <TaskList />
+      <footer className="footer">
+        <FooterStats />
+      </footer>
     </div>
   );
 }
