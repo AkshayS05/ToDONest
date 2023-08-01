@@ -1,0 +1,117 @@
+.primary,
+.secondary,
+.delete {
+  border: none;
+  color: white;
+  background-color: rgb(83, 49, 156);
+  padding: 1.2rem 1.6rem;
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.secondary {
+  background-color: rgb(128, 128, 128);
+  margin-left: 2rem;
+}
+
+.primary:hover {
+  background-color: rgba(90, 54, 170, 0.884);
+  cursor: pointer;
+}
+
+.secondary:hover {
+  background-color: rgba(145, 144, 144, 0.671);
+  cursor: pointer;
+}
+
+.delete {
+  background-color: #8b0000;
+  margin-left: 1rem;
+}
+
+.delete:hover {
+  background-color: #b96666;
+  cursor: pointer;
+}
+
+.add_task_btn {
+  border: none;
+  color: white;
+  background-color: rgb(83, 49, 156);
+  padding: 16px;
+  border-radius: 10px;
+  transition: 0.15s transform ease;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.add_task_btn:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+button[disabled] {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+@media (max-width: 50em) {
+  .add_task_btn {
+    padding: 1.4rem;
+    margin: 2.2rem 0;
+    font-size: 1.2rem;
+  }
+  .primary,
+  .secondary,
+  .delete {
+    padding: 1.2rem 1.6rem;
+  }
+}
+
+@media (max-width: 40em) {
+  .add_task_btn {
+    padding: 1.2rem;
+    margin: 2rem 0;
+    font-size: 1.2rem;
+  }
+  .primary,
+  .secondary,
+  .delete {
+    padding: 1rem 1.4rem;
+  }
+}
+
+@media (max-width: 36em) {
+  .primary,
+  .secondary,
+  .delete {
+    padding: 0.8rem 1rem;
+  }
+}
+
+@media (max-width: 28em) {
+  .primary,
+  .secondary,
+  .delete {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 24em) {
+  .primary,
+  .secondary,
+  .delete {
+    font-size: 1rem;
+  }
+  .add_task_btn {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 21.5em) {
+  .primary,
+  .secondary,
+  .delete {
+    font-size: 0.9rem;
+  }
+}
