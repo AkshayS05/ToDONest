@@ -17,6 +17,7 @@ const AddTask = ({ task, onAdd, addTask, onNewTask }: AddTaskProps) => {
   const priorityRef = useRef<HTMLInputElement>(null);
   const [disabled, setDisabled] = useState(true);
   const [edit, setEdit] = useState(true);
+
   useEffect(() => {
     if (nameRef.current !== null && nameRef.current.value.length > 3) {
       setDisabled(false);
