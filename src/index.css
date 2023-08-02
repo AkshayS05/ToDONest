@@ -1,8 +1,26 @@
+:root {
+  --text-dark: #000;
+  --text-light: #fff;
+  --text-grey: #adbbdc;
+  --primary-btn-color: #53319c;
+  --button-delete-color:#b96666
+  --background-body-color: rgb(233, 223, 255);
+  --list-background-color:#cbc1e1;
+  --list-background-color-hover:#876fba;
+  --list-border-color:#baadd7;
+  --list-buttons-background-color:#808000;
+  --list-buttons-delete-background-color:#ae4d4d;
+  --form-input-background:#baadd7;
+  --form-input-color:#ccc;
+  --bg-white: #fff;
+  --bg-footer:#9883c4;
+  --bg-light:rgb(233, 223, 255);
+}
 html {
   font-size: 62.5%;
 }
 body {
-  color: #000;
+  color: var(--text-dark);
   width: 100%;
   margin: 0;
   box-sizing: border-box;
@@ -11,12 +29,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(233, 223, 255);
+  background-color: var(--bg-light);
 }
 .weekday {
   font-size: 3rem;
   text-align: center;
-  color: #53319c;
+  color: var(--primary-btn-color);
 }
 @media (max-width: 50em) {
   h1 {

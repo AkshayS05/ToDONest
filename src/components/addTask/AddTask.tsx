@@ -15,15 +15,12 @@ const AddTask = ({ task, onAdd, addTask, onNewTask }: AddTaskProps) => {
   const nameRef = useRef<HTMLInputElement>(null);
   const statusRef = useRef<HTMLSelectElement>(null);
   const priorityRef = useRef<HTMLInputElement>(null);
-  //disabled state to disable button if input is less than 3 characters
   const [disabled, setDisabled] = useState(true);
   const [edit, setEdit] = useState(true);
   useEffect(() => {
-    // condition to enable add task button on the form
     if (nameRef.current !== null && nameRef.current.value.length > 3) {
       setDisabled(false);
     }
-    // if there is an existing task make edit state to true
     if (task) {
       setEdit(true);
       setDisabled(false);
@@ -34,7 +31,6 @@ const AddTask = ({ task, onAdd, addTask, onNewTask }: AddTaskProps) => {
       statusRef.current !== null &&
       priorityRef.current !== null
     ) {
-      //use the exisiting values in case of updating the task
       nameRef.current.value = task.task;
       statusRef.current.value = String(task.status);
       priorityRef.current.checked = task.priority;
@@ -43,18 +39,15 @@ const AddTask = ({ task, onAdd, addTask, onNewTask }: AddTaskProps) => {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    // check of the values exist, use them else store the user input
     const newTask: TaskItems = {
       id: task ? task.id : getId(),
       task: nameRef.current?.value || "",
       status: statusRef.current?.value === "true" ? true : false,
       priority: priorityRef.current?.checked ? true : false,
     };
-    //in case of new task addition
+
     !disabled && onAdd(newTask);
-    // in case of edit is true to update the exisiting task
     if (edit) {
-      //method defined in Task provider to update the existing task.
       onNewTask();
     }
   };

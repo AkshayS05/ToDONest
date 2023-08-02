@@ -83,6 +83,10 @@ function TaskProvider({ children }: TaskProviderProps) {
   const { sortedTasks } = useSort({ searchedTasks, sortBy });
 
   const handleAdd = (newTask: TaskItems) => {
+    if (newTask.task.length === 0) return;
+    if (newTask.task.length > 10) {
+      newTask.task = newTask.task.substring(0, 15) + "...";
+    }
     // to add a new task on the top of the list and then the exisitng tasks.
     setTasks([newTask, ...tasks]);
     //ones the task is added, close the form.

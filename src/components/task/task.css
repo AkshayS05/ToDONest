@@ -2,7 +2,7 @@
 li.task,
 li.priority,
 li.completed {
-  background-color: #cbc1e1;
+  background-color: var(--list-background-color);
   padding: 1rem;
   margin-bottom: 1rem;
   display: flex;
@@ -14,6 +14,9 @@ li.completed {
   font-size: 1.8rem;
   transition: box-shadow 0.3s ease;
   text-transform: capitalize;
+  /* width: 50rem;
+  height: 2.5rem;
+  overflow-y: hidden; */
 }
 li.priority:hover::after {
   content: "Priority";
@@ -21,7 +24,7 @@ li.priority:hover::after {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #876fba;
+  background-color: var(--list-background-color);
   color: #fff;
   padding: 0.4rem 0.8rem;
   border-radius: 0.4rem;

@@ -14,6 +14,11 @@
   left: 0;
   z-index: 2;
 }
+.noTasksMessage {
+  font-size: 3rem;
+  text-align: center;
+  color: var(--primary-btn-color);
+}
 /* when search bar is visible */
 .showSearchBar {
   width: 16rem;
@@ -39,6 +44,9 @@ input.searchBar[disabled] {
   .searchBar {
     top: -1.2rem;
     width: 80%;
+  }
+  .noTasksMessage {
+    font-size: 2rem;
   }
 }
 @media (max-width: 40em) {
