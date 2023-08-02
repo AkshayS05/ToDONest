@@ -39,7 +39,7 @@ const SearchTask = () => {
             : "Add Task to start searching..."
         }
       />
-      {tasks.length === 0 && (
+      {tasks.length === 0 && searchQuery && (
         <p className="noTasksMessage">Sorry, no such tasks found.</p>
       )}
     </div>
