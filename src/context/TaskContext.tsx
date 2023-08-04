@@ -21,8 +21,11 @@ type TaskContextValue = {
   onEdit: (task: TaskItems) => void;
   onUpdate: (task: TaskItems) => void;
   onDeleteAll: () => void;
+  handleFindTaskByid: (id: string) => TaskItems | undefined;
   onToggle: (id: string) => void;
   onCompletedTasksDeletion: () => void;
+  handleUsernameSubmit: (username: string) => void;
+  username: string;
   editTask: TaskItems | null;
   searchedTasks: TaskItems[];
   searchQuery: string;
@@ -42,10 +45,13 @@ const TaskContext = createContext<TaskContextValue>({
   onEdit: () => {},
   onDelete: () => {},
   onDeleteAll: () => {},
+  handleFindTaskByid: () => undefined,
   onToggle: () => {},
   onCompletedTasksDeletion: () => {},
+  handleUsernameSubmit: () => {},
   onUpdate: () => {},
   searchedTasks: [],
+  username: "",
   editTask: null,
   searchQuery: "",
   setSearchQuery: () => {},
@@ -63,11 +69,23 @@ function TaskProvider({ children }: TaskProviderProps) {
   const [editTask, setEditTask] = useState<TaskItems | null>(null);
   //if user search for a particular task from the list query will be set to that input else it is empty string to start with.
   const [searchQuery, setSearchQuery] = useState("");
+
   //fetch the tasks from the localstorage stored in myTasks if any, else an empty array (initial state)
   const [tasks, setTasks] = useLocalStorageState<TaskItems[]>({
     initialState: [],
     key: "myTasks",
   });
+  //to access username
+  const [username, setUsername] = useLocalStorageState<string>({
+    initialState: "",
+    key: "username",
+  });
+  //add username to the localstorage
+  const handleUsernameSubmit = (username: string) => {
+    if (username) {
+      setUsername(username);
+    }
+  };
   // search task
 
   // if there is any search in the input, we will try to find the task from the list, if there is no search query then the tasks will be shown as they are.
@@ -84,15 +102,16 @@ function TaskProvider({ children }: TaskProviderProps) {
 
   const handleAdd = (newTask: TaskItems) => {
     if (newTask.task.length === 0) return;
-    if (newTask.task.length > 10) {
-      newTask.task = newTask.task.substring(0, 15) + "...";
-    }
+    const newIndex = tasks.length + 1;
     // to add a new task on the top of the list and then the exisitng tasks.
-    setTasks([newTask, ...tasks]);
+    const newTaskWithIndex = { ...newTask, index: newIndex };
+    setTasks([newTaskWithIndex, ...tasks]);
     //ones the task is added, close the form.
     setAddTask(false);
   };
-
+  const handleFindTaskByid = (id: string) => {
+    return tasks.find((task) => task.id === id);
+  };
   const handleNewTask = () => {
     // to toggle if user is in the add task form or not.
     setAddTask(!addTask);
@@ -146,10 +165,13 @@ function TaskProvider({ children }: TaskProviderProps) {
         editTask,
         onClick: handleNewTask,
         onToggle: handleToggle,
+        username,
         onEdit: handleEdit,
         onUpdate: handleUpdate,
         onDelete: handleDelete,
         onDeleteAll: handleDeleteAll,
+        handleUsernameSubmit,
+        handleFindTaskByid,
         onCompletedTasksDeletion: handleCompletedTasksDeletion,
         searchedTasks,
         searchQuery,

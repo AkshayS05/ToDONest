@@ -4,4 +4,5 @@ export default interface TaskItems {
   task: string;
   status: boolean;
   priority: boolean;
+  index: number;
 }

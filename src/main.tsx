@@ -5,10 +5,9 @@ import "./index.css";
 import { TaskProvider } from "./context/TaskContext.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <TaskProvider>
-    <React.StrictMode>
+  <React.StrictMode>
+    <TaskProvider>
       <App />
-    </React.StrictMode>
-    ,
-  </TaskProvider>
+    </TaskProvider>
+  </React.StrictMode>
 );

@@ -1,3 +1,6 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
 import { useTasks } from "../../context/TaskContext";
 import TaskItems from "../../model/task";
 import Button from "../../ui/Button";
@@ -12,11 +15,16 @@ interface Task {
 
 const Task = ({ task }: Task) => {
   const { onEdit, onDelete, onToggle } = useTasks();
+  const [showFullTask, setShowFullTask] = useState(false);
+
   return (
     //conditional class
-    <li className={task.priority && !task.status ? "priority" : "task"}>
+    <li
+      onClick={() => setShowFullTask(!showFullTask)}
+      className={task.priority && !task.status ? "priority" : "task"}
+    >
       <div className="task_name">
-        {/* onToggle emthod to turn on and off the checkbox */}
+        {/* onToggle method to turn on and off the checkbox */}
         <input
           type="checkbox"
           checked={task.status}
@@ -24,7 +32,11 @@ const Task = ({ task }: Task) => {
         />
         {/* if the task is marked as completed, then it will geta  style of cut out using line-through */}
 
-        <span className={task.status ? "completed" : ""}>{task.task}</span>
+        <Link to={`/task-details/${task.id}`}>
+          <span className={task.status ? "completed" : ""}>
+            {showFullTask ? task.task : task.task.slice(0, 20) + "..."}
+          </span>
+        </Link>
       </div>
       <div className="list_buttons">
         {/* Button components with Edit and Delete Children */}

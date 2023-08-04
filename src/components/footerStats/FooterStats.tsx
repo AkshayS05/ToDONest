@@ -5,14 +5,14 @@ import "./footerStats.css";
 
 const FooterStats = () => {
   //getting tasks from the TaskContext
-  const { tasks } = useTasks();
+  const { tasks, username } = useTasks();
   //to get the total number of tasks
   const totalTasks = tasks.length;
   //if total tasks are 0, then simply return the below message
   if (!totalTasks) {
     return (
       <p className="progressMessage">
-        You have no tasks to do at the moment!{" "}
+        Hey {username}, you have no tasks to do at the moment!{" "}
         <em>Start adding tasks to keep a track.</em>
       </p>
     );

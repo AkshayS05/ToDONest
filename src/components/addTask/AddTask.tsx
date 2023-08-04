@@ -42,6 +42,7 @@ const AddTask = ({ task, onAdd, addTask, onNewTask }: AddTaskProps) => {
     e.preventDefault();
     const newTask: TaskItems = {
       id: task ? task.id : getId(),
+      index: task ? task.index : 0,
       task: nameRef.current?.value || "",
       status: statusRef.current?.value === "true" ? true : false,
       priority: priorityRef.current?.checked ? true : false,
