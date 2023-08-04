@@ -12,6 +12,8 @@ const Username = () => {
   useEffect(() => {
     if (username) {
       navigate("/task-list");
+    } else if (username === "") {
+      navigate("/");
     }
   }, [username, navigate]);
 
@@ -25,10 +27,10 @@ const Username = () => {
   };
 
   return (
-    <section>
+    <section className="home_components">
       <h1 className="welcome_heading">Welcome to ToDo Nest✍</h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="username">Enter your Name:</label>
+      <form onSubmit={handleSubmit} className="username_form">
+        <label htmlFor="username">Please enter your Name:</label>
         <input type="text" id="username" ref={userNameRef} />
         <Button type="primary">Submit</Button>
       </form>

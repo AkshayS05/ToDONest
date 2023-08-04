@@ -1,3 +1,37 @@
+/* username.css */
+.home_components {
+  text-align: center;
+  margin-top: 2rem;
+}
+
 .welcome_heading {
-  padding: 2rem;
+  font-size: 3rem;
+}
+
+.username_form {
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: column; /* Added to make label and input appear on separate lines */
+  align-items: center;
+}
+
+.username_form label {
+  display: block; /* Added to make label appear on a separate line */
+  margin-bottom: 0.5rem;
+}
+
+.username_form input {
+  padding: 0.5rem 2rem;
+  margin-bottom: 4rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+.username_form label {
+  font-size: 2rem;
+}
+
+.username_form button {
+  font-size: 1.6rem;
 }
