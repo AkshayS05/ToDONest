@@ -17,7 +17,6 @@ const Taskdetails = () => {
     return <PageNotFound />;
   }
   const task = handleFindTaskByid(taskId);
-  console.log(task?.index);
 
   if (!task) return null;
 
@@ -30,9 +29,9 @@ const Taskdetails = () => {
         <div className="task_status">
           <p className={task.status ? "completed_task" : "incomplete"}>
             {task.status ? "Status: Completed" : "Status: Yet to Complete"}
-            <p className={task.priority ? "priority_task" : ""}>
-              {task.priority ? "P" : ""}
-            </p>
+          </p>
+          <p className={task.priority ? "priority_task" : ""}>
+            {task.priority ? "P" : ""}
           </p>
         </div>
 

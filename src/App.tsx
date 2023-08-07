@@ -12,8 +12,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Username />} />
-        <Route path="task-details/:taskId" element={<Taskdetails />} />
-        <Route path="task-list" element={<TaskListPage />} />
+        <Route path="/task-details/:taskId" element={<Taskdetails />} />
+        <Route path="/task-list" element={<TaskListPage />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
