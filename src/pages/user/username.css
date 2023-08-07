@@ -12,12 +12,12 @@
 .username_form {
   margin-top: 8rem;
   display: flex;
-  flex-direction: column; /* Added to make label and input appear on separate lines */
+  flex-direction: column;
   align-items: center;
 }
 
 .username_form label {
-  display: block; /* Added to make label appear on a separate line */
+  display: block;
   margin-bottom: 0.5rem;
 }
 
@@ -41,6 +41,15 @@
   .welcome_heading {
     font-size: 2.8rem;
   }
+  .username_form input {
+    padding: 0.5rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+  }
+  .username_form label {
+    font-size: 1.8rem;
+  }
 }
 @media (max-width: 40em) {
   .welcome_heading {
@@ -51,10 +60,13 @@
   .welcome_heading {
     font-size: 2.4rem;
   }
-}
-
-@media (max-width: 22.6em) {
-  .welcome_heading {
-    font-size: 2.2rem;
+  .username_form input {
+    padding: 0.5rem 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 0.3rem;
+    font-size: 1.2rem;
+  }
+  .username_form label {
+    font-size: 1.4rem;
   }
 }

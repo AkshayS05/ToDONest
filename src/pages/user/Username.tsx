@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const Username = () => {
   const userNameRef = useRef<HTMLInputElement>(null);
+
   const navigate = useNavigate();
   const { handleUsernameSubmit, username, setUsername } = useTasks();
   const [buttonDisabled, setButtonDisabled] = useState(username.length === 0);
@@ -19,6 +20,7 @@ const Username = () => {
     navigate("/task-list");
   };
   useEffect(() => {
+    userNameRef?.current?.focus();
     setButtonDisabled(username.length === 0);
   }, [username]);
 
