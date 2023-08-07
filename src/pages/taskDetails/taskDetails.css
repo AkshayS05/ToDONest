@@ -39,3 +39,20 @@
   border-radius: 2rem;
   color: var(--text-light);
 }
+
+/* media queries */
+@media (max-width: 50em) {
+  .task_details {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 40em) {
+  .task_details {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 28em) {
+  .task_details {
+    font-size: 1.2rem;
+  }
+}

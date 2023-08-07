@@ -6,6 +6,7 @@
 
 .welcome_heading {
   font-size: 3rem;
+  padding: 1rem;
 }
 
 .username_form {
@@ -34,4 +35,26 @@
 
 .username_form button {
   font-size: 1.6rem;
+}
+/* media queries */
+@media (max-width: 50em) {
+  .welcome_heading {
+    font-size: 2.8rem;
+  }
+}
+@media (max-width: 40em) {
+  .welcome_heading {
+    font-size: 2.6rem;
+  }
+}
+@media (max-width: 28em) {
+  .welcome_heading {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 22.6em) {
+  .welcome_heading {
+    font-size: 2.2rem;
+  }
 }
