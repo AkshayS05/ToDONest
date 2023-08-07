@@ -26,6 +26,7 @@ type TaskContextValue = {
   onCompletedTasksDeletion: () => void;
   handleUsernameSubmit: (username: string) => void;
   username: string;
+  setUsername: (username: string) => void;
   editTask: TaskItems | null;
   searchedTasks: TaskItems[];
   searchQuery: string;
@@ -52,6 +53,7 @@ const TaskContext = createContext<TaskContextValue>({
   onUpdate: () => {},
   searchedTasks: [],
   username: "",
+  setUsername: () => {},
   editTask: null,
   searchQuery: "",
   setSearchQuery: () => {},
@@ -166,6 +168,7 @@ function TaskProvider({ children }: TaskProviderProps) {
         onClick: handleNewTask,
         onToggle: handleToggle,
         username,
+        setUsername,
         onEdit: handleEdit,
         onUpdate: handleUpdate,
         onDelete: handleDelete,
