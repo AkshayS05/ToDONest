@@ -34,8 +34,9 @@
     height: 60vh;
   }
 }
-@media (max-width: 23em) {
+@media (max-width: 17.5em) {
   .taskList {
-    height: 70vh;
+    height: 100vh;
+    padding: 0 2rem;
   }
 }

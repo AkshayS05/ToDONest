@@ -88,3 +88,16 @@ p.progressMessage {
     padding: 0 1rem;
   }
 }
+@media (max-width: 17.5em) {
+  .footer_items {
+    padding: 0 1rem;
+  }
+  footer em,
+  p.progressMessage {
+    font-size: 1.2rem;
+    padding-right: 2rem;
+  }
+  .footer_items Button {
+    margin-left: 0;
+  }
+}

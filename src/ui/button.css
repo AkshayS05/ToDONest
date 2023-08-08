@@ -144,3 +144,11 @@ button[disabled] {
     max-width: 70%;
   }
 }
+@media (max-width: 17.5em) {
+  .primary,
+  .secondary {
+    font-size: 0.7rem;
+    padding: 1rem 1rem;
+    margin-right: 0.6rem;
+  }
+}

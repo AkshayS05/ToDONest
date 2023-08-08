@@ -72,3 +72,14 @@ body {
     text-align: left;
   }
 }
+@media (max-width: 17.5em) {
+  h1 {
+    font-size: 1.6rem;
+    margin: 0 3rem;
+
+  }
+  .weekday {
+    font-size: 1.2rem;
+  
+  }
+}
