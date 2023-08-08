@@ -23,8 +23,10 @@ const TaskListPage = () => {
           </Button>
         </span>
       </div>
-      <AddTaskHelper />
-      <TaskList />
+      <div className="app_body">
+        <AddTaskHelper />
+        <TaskList />
+      </div>
       <footer className="footer">
         <FooterStats />
       </footer>

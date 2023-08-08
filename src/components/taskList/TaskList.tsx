@@ -7,7 +7,7 @@ const TaskList = () => {
   //get the tasks list from the context hook.
   const { tasks } = useTasks();
   return (
-    <div>
+    <div className="taskList_container">
       <ul className="taskList">
         {/* iterate over the tasks and create a list */}
         {tasks?.map((task) => (

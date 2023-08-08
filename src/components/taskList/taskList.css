@@ -1,7 +1,19 @@
 /* ul  */
 .taskList {
-  height: 80vh;
-  overflow-y: hidden;
+  height: 40vh;
   padding: 0;
   margin: 0;
+  overflow-y: scroll;
+
+  /* Hide the scrollbar */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+
+  &::-webkit-scrollbar {
+    width: 0.1rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
 }
