@@ -17,3 +17,25 @@
     background-color: transparent;
   }
 }
+
+@media (max-width: 40em) {
+  .taskList {
+    height: 50vh;
+  }
+}
+@media (max-width: 27em) {
+  .taskList {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 23em) {
+  .taskList {
+    height: 60vh;
+  }
+}
+@media (max-width: 23em) {
+  .taskList {
+    height: 70vh;
+  }
+}
